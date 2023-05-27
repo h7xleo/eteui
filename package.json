@@ -1,31 +1,54 @@
 {
-  "name": "eternity",
+  "name": "eteui",
   "version": "0.1.0",
-  "private": true,
+  "description": "React component library",
+  "author": "h7x",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "component",
+    "UI",
+    "React"
+  ],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.29",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "async-validator": "^4.1.1",
+    "axios": "^1.4.0",
+    "classnames": "^2.3.2",
+    "lodash-es": "^4.17.21",
+    "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean&&npm run build-ts&&npm run build-css",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:now": "cross-env CI=true react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -38,6 +61,42 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.12",
+    "@storybook/addon-interactions": "^7.0.12",
+    "@storybook/addon-links": "^7.0.12",
+    "@storybook/blocks": "^7.0.12",
+    "@storybook/preset-create-react-app": "^7.0.12",
+    "@storybook/react": "^7.0.12",
+    "@storybook/react-webpack5": "^7.0.12",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/lodash-es": "^4.17.7",
+    "@types/node": "^16.18.29",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@types/react-transition-group": "^4.4.6",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "cross-env": "^7.0.3",
+    "eslint-plugin-storybook": "^0.6.12",
+    "node-sass": "^7.0.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "rimraf": "^5.0.1",
+    "storybook": "^7.0.12",
+    "typescript": "^4.9.5",
+    "webpack": "^5.83.1"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!axios|lodash-es)"
     ]
   }
 }

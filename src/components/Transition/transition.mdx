@@ -1,0 +1,23 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/blocks";
+import Transition from "./Transition";
+import * as TranStory from "./transition.stories";
+
+<Meta of={TranStory} />
+
+<h1>Transition</h1>
+<p>动画组件，基于react-transition-group</p>
+<br />
+
+<h3>如何使用</h3>
+
+```js
+import { Transition } from "eteui";
+```
+
+<h3>tips</h3>
+<p>支持react-transition-group的CSSTransition所有props</p>
+
+<h3>示例</h3>
+<Canvas of={TranStory.sample} />
+
+<ArgsTable of={Transition} />

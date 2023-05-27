@@ -1,0 +1,36 @@
+.ete-progress-bar {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .ete-progress-bar-outer {
+      width: calc(100% - 30px);
+      border-radius: $progress-border-radius;
+      background-color: $progress-bg;
+      overflow: hidden;
+      position: relative;
+    }
+    .ete-progress-bar-inner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      border-radius: $progress-border-radius;
+      line-height: 1;
+      transition: $progress-bar-transition;
+    }
+    .ete-progress-inner-text {
+      width: 30px;
+      color: $progress-bar-color;
+      font-size: $progress-font-size;
+      margin-left: 5px;  
+    }
+    @each $key, $val in $theme-color {
+      .color-#{$key} {
+        background-color: $val;
+      }
+    }
+  }

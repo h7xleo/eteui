@@ -1,0 +1,5 @@
+@each $name,$color in $theme-color {
+    .ete-icon-#{$name}{
+        color: $color;
+    }
+}

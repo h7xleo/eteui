@@ -1,0 +1,66 @@
+.ete-tabs {
+  .ete-tabs-nav {
+    // display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+    .ete-tabs-nav-li {
+      display: inline-block;
+      padding: $nav-link-padding-y $nav-link-padding-x;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        color: $nav-tabs-link-hover-color;
+      }
+      &.is-disabled {
+        color: $nav-link-disabled-color;
+        pointer-events: none;
+        cursor: default;
+        background-color: transparent;
+        border-color: transparent;
+      }
+      &.is-active {
+        color: $nav-tabs-link-active-color;
+      }
+    }
+  }
+  .ete-tabs-nav-line {
+    .ete-tabs-nav-li {
+      &.is-active {
+        border-bottom: $nav-tabs-border-width * 2 solid
+          $nav-tabs-link-active-color;
+      }
+    }
+  }
+  .ete-tabs-nav-card {
+    position: relative;
+    border-bottom: none;
+    &::after{
+        content: "";
+        width: 100%;
+        height: $nav-tabs-border-width;
+        background-color: $nav-tabs-border-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .ete-tabs-nav-li {
+      border: $nav-tabs-border-width solid transparent;
+      margin-bottom: -$nav-tabs-border-width;
+      &.is-active {
+        border-radius: $nav-tabs-border-radius $nav-tabs-border-radius 0 0;
+        border: $nav-tabs-border-width solid $nav-tabs-border-color;
+        background-color: $nav-tabs-link-active-bg;
+        border-bottom: $nav-tabs-border-width solid $nav-tabs-link-active-bg;
+      }
+    }
+  }
+  .ete-tabs-content {
+    margin-top: $nav-tabs-content-margin;
+  }
+}

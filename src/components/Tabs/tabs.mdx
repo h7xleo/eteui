@@ -1,0 +1,42 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/blocks";
+import Tabs from "./Tabs";
+import TabItem from "./TabItem";
+import * as TabsStory from "./tabs.stories";
+
+<Meta of={TabsStory} />
+
+<h1>Tabs</h1>
+<p>选项卡切换组件。</p>
+<br />
+
+<h3>如何使用</h3>
+
+```js
+import { Tabs } from "eteui";
+<Tabs>
+  <Tabs.TabItem></Tabs.TabItem>
+</Tabs>
+or
+const {TabItem} = Tabs
+<Tabs>
+  <TabItem></TabItem>
+</Tabs>
+```
+
+<h3>行选项卡</h3>
+<Canvas of={TabsStory.defaultTabs} />
+
+<h3>卡片选项卡</h3>
+<Canvas of={TabsStory.cardTabs} />
+
+<h3>禁用状态</h3>
+<Canvas of={TabsStory.disabledTabs} />
+
+<h3>自定义选项卡</h3>
+<Canvas of={TabsStory.customTabs} />
+
+<h3>Tabs</h3>
+<ArgsTable of={Tabs} />
+
+<h3>TabItem</h3>
+<ArgsTable of={TabItem} />

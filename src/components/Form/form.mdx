@@ -1,0 +1,65 @@
+import Form from "./Form";
+import FormItem from "./FormItem";
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/blocks";
+import * as formStory from "./form.stories";
+
+<Meta of={formStory} />
+
+<h1>Form</h1>
+<p>高性能表单控件，自带数据域管理。包含数据录入、校验以及对应样式。</p>
+<br />
+
+<h3>如何使用</h3>
+
+```js
+import { Form } from "eteui";
+<Form>
+  <Form.Item></Form.Item>
+</Form>;
+or
+const {Item} = Form
+<Form>
+  <Item></Item>
+</Form>;
+```
+
+<h3>示例</h3>
+<Canvas of={formStory.defaultForm} />
+
+<h3>自定义规则，调用表单实例</h3>
+<Canvas of={formStory.sampleForm} />
+
+<h3>Form</h3>
+<ArgsTable of={Form} />
+
+<h3>Form实例上的方法</h3>
+
+```js
+通过绑定ref可以拿到form实例上的方法
+const ref = useRef<IFormRef>(null)
+<Form ref={ref}></Form>
+console.log(ref.current)
+
+validateField(name:string) //校验某项
+validateAllFields() //校验整个表单
+getFieldValue(key: string) //获取某项值
+getFieldsvalue() //获取整个表单值
+setFieldValu(name: string, value: any) //更改某项值
+resetFields() //重置整个表单
+
+当form的children为function时可以拿到isVaild,isSubmitting,errors
+<Form>
+({isVaild,isSubmitting,errors})=>{
+ console.log("验证是否通过",isVaild) //isVaild:boolean
+ console.log("是否处于提交状态",isSubmitting) //isSubmitting:boolean
+ console.log("验证的错误信息",errors) //errors:Record<string, ValidateError[]>;
+ return
+    <FormItem name="sample">
+      <Input>
+    </FormItem>
+}
+</Form>
+```
+
+<h3>FormItem</h3>
+<ArgsTable of={FormItem} />

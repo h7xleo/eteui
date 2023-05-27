@@ -1,0 +1,45 @@
+.ete-autoComplete {
+  position: relative;
+  .ete-autoComplete-list {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    background-color: $white;
+    list-style: none;
+    padding-left: 0;
+    white-space: nowrap;
+    border: $menu-border-width solid $menu-border-color;
+    box-shadow: $submenu-box-shadow;
+    overflow-y: auto;
+    z-index: 100;
+    .ete-autoComplete-loadIcon{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+    }
+    .ete-autoComplete-li{
+        padding: $input-padding-y $input-padding-x;
+        font-family: $input-font-family;
+        font-size: $input-font-size;
+        font-weight: $input-font-weight;
+        color: $input-color;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .ete-autoComplete-li-large{
+        padding: $input-padding-y-lg $input-padding-x-lg;
+        font-size: $input-font-size-lg;
+    }
+    .ete-autoComplete-li-small{
+        padding: $input-padding-y-sm $input-padding-x-sm;
+        font-size: $input-font-size-sm;
+    }
+    .ete-autoComplete-li-active{
+        background-color: $gray-3;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.ete-btn {
+  position: relative;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  color: $body-color;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: $btn-border-width solid transparent;
+  @include button-size(
+    $btn-padding-x,
+    $btn-padding-y,
+    $btn-font-size,
+    $btn-border-radius
+  );
+  // padding: $btn-padding-y $btn-padding-x;
+  // font-size: $btn-font-size;
+  // border-radius: $btn-border-radius;
+  box-shadow: $btn-box-shadow;
+  transition: $btn-transition;
+  cursor: pointer;
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: $btn-disabled-opacity;
+    box-shadow: none;
+    > * {
+      pointer-events: none; //子节点不接收任何事件
+    }
+  }
+}
+.ete-btn-large {
+  @include button-size(
+    $btn-padding-x-lg,
+    $btn-padding-y-lg,
+    $btn-font-size-lg,
+    $btn-border-radius-lg
+  );
+}
+.ete-btn-small {
+  @include button-size(
+    $btn-padding-x-sm,
+    $btn-padding-y-sm,
+    $btn-font-size-sm,
+    $btn-border-radius-sm
+  );
+}
+.ete-btn-primary {
+  @include button-style($primary, $primary, $white);
+}
+.ete-btn-danger {
+  @include button-style($danger, $danger, $white);
+}
+.ete-btn-default {
+  @include button-style(
+    $white,
+    $gray-4,
+    $body-color,
+    $white,
+    $primary,
+    $primary
+  );
+}
+.ete-btn-success {
+  @include button-style($success, $success, $white);
+}
+.ete-btn-warning {
+  @include button-style($warning, $warning, $white);
+}
+.ete-btn-dashed {
+  @include button-style(
+    $white,
+    $gray-4,
+    $body-color,
+    $white,
+    $primary,
+    $primary
+  );
+  border-style: dashed;
+}
+.ete-btn-link {
+  font-weight: $font-weight-normal;
+  color: $btn-link-color;
+  text-decoration: $link-decoration;
+  box-shadow: none;
+  &:hover {
+    text-decoration: $link-hover-decoration;
+    color: $link-hover-color;
+  }
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    box-shadow: none;
+  }
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+}
+.ete-btn-circle {
+  @include button-circle($btn-padding-x)
+}
+.ete-btn-circle-large {
+  @include button-circle($btn-padding-x-lg)
+}
+.ete-btn-circle-small {
+  @include button-circle($btn-padding-x-sm)
+}

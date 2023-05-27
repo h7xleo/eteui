@@ -1,0 +1,42 @@
+import Menu from "./Menu";
+import MenuItem from "./MenuItem";
+import SubMenu from "./SubMenu";
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/blocks";
+import * as MenuStory from "./menu.stories";
+
+<Meta of={MenuStory} />
+
+<h1>Menu</h1>
+<p>为页面和功能提供导航的菜单列表。</p>
+<br />
+
+<h3>如何使用</h3>
+
+```js
+import { Menu } from "eteui";
+```
+
+<h3>tips</h3>
+<p>使用 Menu.Item 和 Menu.Submenu 访问选项和子下拉菜单组件</p>
+<br />
+
+<h3>横向菜单</h3>
+<Canvas of={MenuStory.defaultMenu} />
+
+<h3>纵向菜单</h3>
+<Canvas of={MenuStory.verticalMenu} />
+
+<h3>Disabled</h3>
+<Canvas of={MenuStory.disabledMenu} />
+
+<h3>默认展开</h3>
+<Canvas of={MenuStory.openMenu} />
+
+<h3>Menu</h3>
+<ArgsTable of={Menu} />
+
+<h3>SubMenu</h3>
+<ArgsTable of={SubMenu} />
+
+<h3>MenuItem</h3>
+<ArgsTable of={MenuItem} />

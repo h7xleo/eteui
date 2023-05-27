@@ -1,0 +1,73 @@
+.ete-upload{
+    .ete-upload-input{
+        display: inline-block;
+    }
+}
+.ete-uploadList{
+    width: 300px;
+    list-style: none;
+    padding-left: 0;
+    padding-top: 5px;
+    .ete-uploadList-item{
+        width: 100%;
+        .ete-uploadList-item-top{
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            .ete-uploadList-icon{
+                width: 30px;
+                text-align: center;
+                font-size: $font-size-base;
+                color: $gray-7;
+            }
+            .ete-uploadList-name{
+                width: calc(100% - 60px);
+                font-size: $font-size-sm;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .ete-uploadList-status{
+                width: 30px;
+                text-align: center;
+                font-size: $font-size-base;
+            }
+            .ete-uploadList-remove{
+                display: none;
+                width: 30px;
+                text-align: center;
+                font-size: $font-size-base;
+                cursor: pointer;
+            }
+            .ete-uploadList-error{
+                color: $danger
+            }
+        }
+        &:hover{
+            background-color: $gray-3;
+            .ete-uploadList-status{
+                display: none;
+            }
+            .ete-uploadList-remove{
+                display: block;
+            }
+        }
+    }
+}
+.ete-upload-dragger {
+    background: $gray-1;
+    border: 1px dashed $gray-3;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 20px;
+    width: 360px;
+    height: 180px;
+    text-align: center;
+    &:hover {
+      border: 1px dashed $primary;
+    }
+    &.is-drager {
+      border: 2px dashed $primary;
+      background: rgba($primary, .2);
+    }
+  }

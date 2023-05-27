@@ -1,0 +1,37 @@
+.ete-alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  border-radius: $alert-border-radius;
+  .ete-alert-title{
+    font-size: $font-size-base
+  }
+  .ete-alert-title-bold{
+    font-weight: $font-weight-bold;
+  }
+  .ete-alert-close{
+    position: absolute;
+    right: $alert-padding-x;
+    top: $alert-padding-y;
+    color: inherit;
+    cursor: pointer;
+  }
+  .ete-alert-desc{
+    font-size: $font-size-sm;
+    margin: $alert-description-top-margin 0 0;
+    display: block;
+  }
+}
+.ete-alert-default {
+  @include alert-style($primary, dark($primary, 5%), $white);
+}
+.ete-alert-success {
+  @include alert-style($success, dark($success, 5%), $white);
+}
+.ete-alert-danger {
+  @include alert-style($danger, dark($danger, 5%), $white);
+}
+.ete-alert-warning {
+  @include alert-style($warning, dark($warning, 5%), $white);
+}

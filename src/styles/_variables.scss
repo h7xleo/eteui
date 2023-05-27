@@ -1,0 +1,264 @@
+// 中性色版
+$white: #fff !default;
+$gray-1: #fafafa !default;
+$gray-2: #f5f5f5 !default;
+$gray-3: #f0f0f0 !default;
+$gray-4: #d9d9d9 !default;
+$gray-5: #bfbfbf !default;
+$gray-6: #8c8c8c !default;
+$gray-7: #595959 !default;
+$gray-8: #434343 !default;
+$gray-9: #262626 !default;
+$gray-10: #1f1f1f !default;
+$gray-11: #141414 !default;
+$black: #000 !default;
+
+// 基础色版
+$blue: #2894fa !default;
+$indigo: #6610f2 !default;
+$purplr: #722ed1 !default;
+$pink: #eb2f96 !default;
+$red: #f5222d !default;
+$orange: #fa8c16 !default;
+$yellow: #ffec3d !default;
+$green: #52c41a !default;
+$teal: #20c997 !default;
+$cyan: #13c2c2 !default;
+
+// 系统色版
+$primary: $blue !default;
+$secondary: $gray-6 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $orange !default;
+$danger: $red !default;
+$light: $gray-1 !default;
+$dark: $gray-10 !default;
+
+$theme-color: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+// 字体大小
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-root: null !default;
+
+// 字重
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+$font-weight-base: $font-weight-normal !default;
+
+// 行高
+$line-height-base: 1.5 !default;
+$line-height-lg: 2 !default;
+$line-height-sm: 1.25 !default;
+
+// 标题大小
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// 链接
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+// body
+$body-bg: $white !default;
+$body-color: $gray-9 !default;
+$body-text-align: null !default;
+
+// Spacing
+$spacer: 1rem !default;
+
+// Paragraphs
+$paragraph-margin-bottom: 1rem !default;
+
+// hr
+$hr-margin-y: $spacer !default;
+$hr-color: inherit !default;
+$hr-height: 1px !default;
+$hr-opacity: 0.25 !default;
+
+// heading
+$headings-margin-bottom: $spacer / 2 !default;
+$headings-font-family: null !default;
+$headings-font-style: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+
+$dt-font-weight: $font-weight-bold !default;
+
+$small-font-size: 0.875em !default;
+
+$sub-sup-font-size: 0.75em !default;
+
+// code
+$code-font-size: $small-font-size !default;
+$code-color: $pink !default;
+$pre-color: null !default;
+
+$text-muted: $gray-6 !default;
+
+// legeng
+$legend-margin-bottom: 0.5rem !default;
+$legend-font-size: 1.5rem !default;
+$legend-font-weight: null !default;
+
+$mark-padding: 0.2em !default;
+$mark-bg: #fcf8e3 !default;
+
+// options 可配置选项
+$enable-pointer-cursor-for-buttons: true !default;
+
+// border and border radius
+$border-width: 1px !default;
+$border-color: $gray-3 !default;
+$border-radius: 0.25rem !default;
+$border-radius-lg: 0.3rem !default;
+$border-radius-sm: 0.2rem !default;
+
+//box shadow
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+$box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
+
+// button
+$btn-font-weight: 400;
+$btn-padding-y: 0.375rem !default;
+$btn-padding-x: 0.75rem !default;
+$btn-font-family: $font-family-base !default;
+$btn-font-size: $font-size-base !default;
+$btn-line-height: $line-height-base !default;
+$btn-border-width: $border-width !default;
+$btn-padding-y-sm: 0.25rem !default;
+$btn-padding-x-sm: 0.5rem !default;
+$btn-font-size-sm: $font-size-sm !default;
+$btn-padding-y-lg: 0.5rem !default;
+$btn-padding-x-lg: 1rem !default;
+$btn-font-size-lg: $font-size-lg !default;
+$btn-border-width: $border-width !default;
+$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
+$btn-disabled-opacity: 0.65 !default;
+$btn-link-color: $link-color !default;
+$btn-link-hover-color: $link-hover-color !default;
+$btn-link-disabled-color: $gray-6 !default;
+$btn-border-radius: $border-radius !default;
+$btn-border-radius-lg: $border-radius-lg !default;
+$btn-border-radius-sm: $border-radius-sm !default;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+
+// alert
+$alert-padding-y: 0.75rem !default;
+$alert-padding-x: 1.25rem !default;
+$alert-margin-bottom: 1rem !default;
+$alert-border-radius: $border-radius !default;
+$alert-border-width: $border-width !default;
+$alert-description-top-margin: 0.3rem !default;
+
+// menu
+$menu-border-width: $border-width !default;
+$menu-border-color: $border-color !default;
+$menu-box-shadow: inset 0 1px 0 rgba($white, 0.15),
+  0 1px 1px rgba($black, 0.075) !default;
+$menu-transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out !default;
+
+// menu-item
+$menu-item-padding-y: 0.5rem !default;
+$menu-item-padding-x: 1rem !default;
+$menu-item-active-color: $primary !default;
+$menu-item-active-border-width: 2px !default;
+$menu-item-disabled-color: $gray-6 !default;
+
+// subMenu
+$submenu-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12),
+  0 0 6px 0 rgba(0, 0, 0, 0.04);
+
+// tabs
+$nav-link-padding-y: 0.5rem !default;
+$nav-link-padding-x: 1rem !default;
+$nav-link-disabled-color: $gray-6 !default;
+$nav-tabs-border-color: $gray-3 !default;
+$nav-tabs-border-width: $border-width !default;
+$nav-tabs-border-radius: $border-radius !default;
+$nav-tabs-link-hover-border-color: $gray-2 $gray-2 $nav-tabs-border-color !default;
+$nav-tabs-link-hover-color: $primary !default;
+$nav-tabs-link-active-color: $primary !default;
+$nav-tabs-link-active-bg: $body-bg !default;
+$nav-tabs-link-active-border-color: $gray-3 $gray-3 $nav-tabs-link-active-bg !default;
+$nav-tabs-content-margin: 1rem !default;
+
+// input
+$input-padding-y: 0.25rem !default;
+$input-padding-x: 0.5rem !default;
+$input-font-family: $font-family-base !default;
+$input-font-size: $font-size-base !default;
+$input-line-height: $line-height-base !default;
+$input-font-weight: $font-weight-base !default;
+$input-hover-border-width: $border-width !default;
+$input-hover-border-color: $primary !default;
+$input-padding-y-sm: 0.125rem !default;
+$input-padding-x-sm: 0.25rem !default;
+$input-font-size-sm: $font-size-sm !default;
+$input-padding-y-lg: 0.375rem !default;
+$input-padding-x-lg: 0.7rem !default;
+$input-font-size-lg: $font-size-lg !default;
+$input-bg: $white !default;
+$input-disabled-bg: $gray-2 !default;
+$input-disabled-border-color: null !default;
+$input-color: $gray-7 !default;
+$input-border-color: $gray-4 !default;
+$input-border-width: $border-width !default;
+$input-box-shadow: $box-shadow-inset !default;
+$input-border-radius: $border-radius !default;
+$input-border-radius-lg: $border-radius-lg !default;
+$input-border-radius-sm: $border-radius-sm !default;
+$input-focus-bg: $input-bg !default;
+$input-focus-border-color: lighten($primary, 25%) !default;
+$input-focus-width: 0.2rem !default;
+$input-focus-color: $input-color !default;
+$input-focus-shadow-color: rgba($primary, 0.25) !default;
+$input-focus-shadow-error-color: rgba($danger, 0.25) !default;
+$input-focus-box-shadow: 0 0 0 $input-focus-width $input-focus-shadow-color !default;
+$input-focus-box-shadow-error: 0 0 0 $input-focus-width
+  $input-focus-shadow-error-color !default;
+$input-placeholder-color: $gray-6 !default;
+$input-plaintext-color: $body-color !default;
+$input-height-border: $input-border-width * 2 !default;
+$input-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out !default;
+$input-group-addon-color: $input-color !default;
+$input-group-addon-bg: $gray-2 !default;
+$input-group-addon-border-color: $input-border-color !default;
+
+// progress
+$progress-font-size: $font-size-base * 0.75 !default;
+$progress-bg: $gray-2 !default;
+$progress-border-radius: $border-radius !default;
+$progress-bar-color: $black !default;
+$progress-bar-transition: width 0.6s ease !default;

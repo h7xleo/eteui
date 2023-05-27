@@ -1,0 +1,80 @@
+@mixin button-size($padding-x, $padding-y, $font-size, $border-raduis) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-raduis;
+}
+
+@mixin button-style(
+  $background,
+  $border,
+  $color,
+  $hover-background: lighten($background, 7.5%),
+  $hover-border: lighten($border, 10%),
+  $hover-color: $color
+) {
+  background: $background;
+  border-color: $border;
+  color: $color;
+  &:hover {
+    background: $hover-background;
+    border-color: $hover-border;
+    color: $hover-color;
+  }
+  &:focus,
+  &.focus {
+    background: $hover-background;
+    border-color: $hover-border;
+    color: $hover-color;
+  }
+  &.disabled,
+  &[disabled] {
+    background: $background;
+    border-color: $border;
+    color: $color;
+  }
+}
+
+@mixin button-circle($padding) {
+  padding: $padding;
+  border-radius: 100%;
+  &::before {
+    content: "";
+    display: inline-block;
+    padding-bottom: 100%;
+    width: 0.1px;
+    vertical-align: middle;
+  }
+}
+
+@mixin alert-style($background, $border, $color) {
+  background: $background;
+  border-color: $border;
+  color: $color;
+}
+
+@mixin ete-animation(
+  $direction: 'top',
+  $scaleStart: scaleY(0),
+  $scaleEnd: scaleY(1),
+  $origin: center top,
+) {
+  .ete-in-#{$direction}-enter {
+    opacity: 0;
+    transform: $scaleStart;
+  }
+  .ete-in-#{$direction}-enter-active {
+    opacity: 1;
+    transform: $scaleEnd;
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+    transform-origin: $origin
+  }
+  .ete-in-#{$direction}-exit {
+    opacity: 1;
+  }
+  .ete-in-#{$direction}-exit-active {
+    opacity: 0;
+    transform: $scaleStart;
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+    transform-origin: $origin;
+  }
+}
