@@ -1,6 +1,6 @@
 {
   "name": "eteui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React component library",
   "author": "h7x",
   "private": false,
@@ -86,6 +86,7 @@
     "eslint-plugin-storybook": "^0.6.12",
     "node-sass": "^7.0.3",
     "prop-types": "^15.8.1",
+    "pushstate-server": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
