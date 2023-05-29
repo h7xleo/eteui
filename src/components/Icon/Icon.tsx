@@ -29,7 +29,7 @@ export interface IconProps extends FontAwesomeIconProps {
  * 支持react-fontawesome的所有属性，详见https://fontawesome.com/
  * ###如何使用
  * ```js
- * import { Icon } from "Eternity"
+ * import { Icon } from "eteui"
  * ```
  * ###tips
  * 拥有1390个图标，具体名称详见https://fontawesome.com/search?o=r&m=free&s=solid

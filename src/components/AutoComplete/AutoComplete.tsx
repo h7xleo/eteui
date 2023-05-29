@@ -38,7 +38,7 @@ export interface AutoCompleteProps extends Omit<InputProps, "onSelect"> {
  *
  * ###如何使用
  * ```js
- * import { AutoComplete } from "Eternity"
+ * import { AutoComplete } from "eteui"
  * ```
  * ###tips
  * 支持键盘⬆ ⬇ Enter Escape
